@@ -64,9 +64,9 @@ ALTER TABLE 'nameTable' MODIFY COLUMN 'la columna que queremos modificar' 'tipo 
 ALTER TABLE animales MODIFY COLUMN id int auto_increment;
 
 # 10. SI QUEREMOS VER EL COMANDO QUE USAMOS PARA CREAR UNA TABLA
-
+~~~
 SHOW CREATE TABLE 'nameTable';
-
+~~~
 //Example:
 
 SHOW CREATE TABLE animales;
