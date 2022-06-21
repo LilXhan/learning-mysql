@@ -20,9 +20,9 @@ USE myfirstdatabase;
 
 # 4. TIPOS DE DATOS MYSQL
 
-int(integer) -> 1, 3, 10, 1000
-float -> 1.5, 16.9, 100.5
-varchar(string) -> 'chanchito', 'hola mundo'
+int(integer) -> 1, 3, 10, 1000;
+float -> 1.5, 16.9, 100.5;
+varchar(string) -> 'chanchito', 'hola mundo';
 
 # 5. PARA CREAR UNA NUEVA TABLA
 
@@ -36,12 +36,14 @@ CREATE TABLE animales;
 
 CREATE TABLE 'nombre'('valores');   Example:
 
+~~~
 CREATE TABLE animales(
   id int; (le indicamos que id es entero)
-  tipo varchar(255); (le indicamos que tipo sera un string ya que queremos indicar que tipo de animal es) | varchar('le indicamos que tan largo queremos que sea la cadena de caracteres)
+  tipo varchar(255); (le indicamos que tipo sera un string ya que queremos indicar que tipo de animal es) | varchar('le  - indicamos que tan largo queremos que sea la cadena de caracteres)
   estado varchar(255);
   CREATE PRIMARY KEY(id); (con esto le indicamos que esta es una llave primaria y que funcione como identificador unico)
 );
+~~~
 
 # 7. PARA PODER INSERTAR DATOS A NUESTRA TABLA
 
@@ -60,3 +62,22 @@ ALTER TABLE 'nameTable' MODIFY COLUMN 'la columna que queremos modificar' 'tipo 
 //Example:
 
 ALTER TABLE animales MODIFY COLUMN id int auto_increment;
+
+# 10. SI QUEREMOS VER EL COMANDO QUE USAMOS PARA CREAR UNA TABLA
+
+SHOW CREATE TABLE 'nameTable';
+
+//Example:
+
+SHOW CREATE TABLE animales;
+
+NOS MUESTRA EL SIGUIENTE COMANDO POR TERMINAL:
+
+~~~
+CREATE TABLE `animales` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tipo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `estado` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+~~~
