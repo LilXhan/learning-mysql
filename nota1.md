@@ -81,3 +81,63 @@ CREATE TABLE `animales` (
   PRIMARY KEY (`id`)
 )
 ~~~
+
+
+# 11. PARA PODER LISTAR TODOS LOS REGISTROS O MOSTRAR TODOS LOS REGISTROS DE LAS TABLAS QUE HEMOS CREADO.
+TIENE VARIOS METODOS.
+
+- 11.1 MOSTRAR TODOS LAS COLUMNAS Y LAS FILAS
+~~~
+SELECT * FROM 'nameTable';
+~~~
+Example:
+~~~
+SELECT * FROM animales;
+~~~
+- 11.2 MOSTRAR SOLO UN REGISTRO
+~~~
+SELECT * FROM 'nameTable' WHERE 'nameColumn' = 'value';
+~~~
+Example:
+~~~
+SELECT * FROM animales WHERE id = 1;
+SELECT * FROM animales WHERE estado = 'feliz';
+~~~
+
+- 11.3 MOSTRAR UN REGISTRO CON DOS CONDICIONES;
+
+'AND' : SE TIENE QUE CUMPLIR LAS 2 CONDICIONES PARA QUE LOGRE MOSTRAR EL REGISTRO
+~~~
+SELECT * FROM 'nameTable' WHERE 'nameColumn' = 'value' AND 'nameColumn' = 'value';
+~~~
+Example:
+~~~
+SELECT * FROM animales WHERE id = 2 AND tipo = 'perrito';
+~~~
+'OR' : SE MUESTRAN AMBOS VALORES
+~~~
+SELECT * FROM 'nameTable' WHERE 'nameColumn' = 'value' OR 'nameColumn' = 'value';
+~~~
+Example:
+~~~
+SELECT * FROM animales WHERE id = 2 OR tipo = 'chanchito';
+~~~
+
+# 12. ACTUALIZAR LOS REGISTROS QUE YA SE ENCUENTRAN EN NUESTRA BASE DE DATOS
+~~~
+UPDATE 'nameTable' SET 'column' = 'value' WHERE 'colum' = 'value'; // SE RECOMIENDA USAR UN INDENTIFICADOR O ID (AND id = 'value')
+~~~
+Example:
+~~~
+UPDATE animales SET estado = 'triste' WHERE id = 1;
+~~~
+
+# 13. ELIMINAR UN REGISTRO
+~~~
+DELETE FROM 'nameTable' WHERE 'nameColumn' = 'Value' // SE RECOMIENDA USAR SU IDENTIFICADOR O ID
+~~~
+Example:
+~~~
+DELETE FROM animales WHERE id = 3;
+~~~
+
